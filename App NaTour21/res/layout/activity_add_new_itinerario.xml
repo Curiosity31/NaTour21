@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activity.AddNewItinerarioActivity"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.NaTour.NoActionBar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/id_nome_itinerario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/name_Itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/etNomeItinerario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNomeItinerario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_scuro"
+            android:ems="10"
+            android:hint="@string/Nome_itinerario"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/id_tempo_totale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_nome_itinerario"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/id_tempo_totale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/tempo_totale_Itinerario"
+            style="@android:style/Widget.EditText"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_ore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNomeItinerario" />
+
+        <TextView
+            android:id="@+id/id_ore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/ore_Itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/NP_ore"
+            app:layout_constraintEnd_toStartOf="@+id/id_minuti"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_tempo_totale" />
+
+        <TextView
+            android:id="@+id/id_minuti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/minuti_Itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/NP_minuti"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_ore"
+            app:layout_constraintTop_toBottomOf="@+id/id_tempo_totale"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <NumberPicker
+            android:id="@+id/NP_ore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/id_difficolta"
+            app:layout_constraintEnd_toStartOf="@+id/NP_minuti"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_ore" />
+
+        <NumberPicker
+            android:id="@+id/NP_minuti"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/id_difficolta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/NP_ore"
+            app:layout_constraintTop_toBottomOf="@+id/id_minuti" />
+
+        <TextView
+            android:id="@+id/id_difficolta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/et_difficoltà"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            style="@android:style/Widget.EditText"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/id_nome_itinerario"
+            app:layout_constraintTop_toBottomOf="@+id/NP_ore" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_difficolta">
+
+            <RadioButton
+                android:id="@+id/rb_facile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="48dp"
+                android:text="@string/rb_facile" />
+
+            <RadioButton
+                android:id="@+id/rb_intermedio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="48dp"
+                android:text="@string/rb_intermedio" />
+
+            <RadioButton
+                android:id="@+id/rb_difficile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="48dp"
+                android:text="@string/rb_difficile" />
+
+            <RadioButton
+                android:id="@+id/rb_estremo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="48dp"
+                android:text="@string/rb_estremo" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_punto_di_inizio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/punto_di_inizio_Itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/svPunto_inizio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svPunto_inizio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde_scuro"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:textColorHint="@color/grey"
+            app:iconifiedByDefault="false"
+            android:imeOptions=""
+            app:layout_constraintBottom_toTopOf="@+id/cbAccessibilitàDisabili"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_punto_di_inizio"
+            app:queryHint="@string/etPuntoDiInizio" />
+
+        <CheckBox
+            android:id="@+id/cbAccessibilitàDisabili"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/accessibilità_disabili_Itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescrizione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/svPunto_inizio" />
+
+        <TextView
+            android:id="@+id/tvDescrizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/tvDescrizione_itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/etDescrizione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbAccessibilitàDisabili" />
+
+        <EditText
+            android:id="@+id/etDescrizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde_scuro"
+            android:ems="10"
+            android:hint="@string/etDescrizione_itinerario"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/tvContaCaratteriDescrizione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescrizione"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvContaCaratteriDescrizione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/tvContaCaratteri"
+            android:textColor="@color/verde_scuro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnInserisciTracciato"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescrizione" />
+
+        <Button
+            android:id="@+id/btnInserisciTracciato"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/button_rounded"
+            android:drawableEnd="@drawable/ic_baseline_map_24"
+            android:text="@string/btn_InserisciTracciato"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btnSalvaItinerario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescrizione"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnSalvaItinerario"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/btnSalvaItinerario"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnInserisciTracciato"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

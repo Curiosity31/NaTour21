@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ShowIn="navigation_view"
+    android:theme="@style/Theme.NaTour.NoActionBar">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profilo_menu"/>
+        <item
+            android:id="@+id/nav_itinerario"
+            android:icon="@drawable/ic_itinerario"
+            android:title="@string/inserisci_itinerario_menu"/>
+        <item
+            android:id="@+id/nav_compilation"
+            android:icon="@drawable/ic_compilation"
+            android:title="@string/crea_compilation_menu"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/impostazioni_menu"/>
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_log_out"
+            android:title="@string/logOut_menu"/>
+    </group>
+</menu>

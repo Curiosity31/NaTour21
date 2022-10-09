@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.FiltriActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewFiltri"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/Logo"
+            android:src="@drawable/logo_natour_700ppi_small"
+            app:layout_constraintBottom_toTopOf="@+id/id_area_geografica_filtri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/id_area_geografica_filtri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:gravity="center_horizontal"
+            android:text="@string/tv_area_geografica"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/svArea_geografica"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewFiltri" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svArea_geografica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:backgroundTint="@color/verde_scuro"
+            android:ems="10"
+            android:imeOptions=""
+            android:importantForAutofill="no"
+            android:textColorHint="@color/grey"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toTopOf="@+id/id_durata_itinerario_filtri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_area_geografica_filtri"
+            app:queryHint="@string/etPuntoDiInizio_filtri" />
+
+        <TextView
+            android:id="@+id/id_durata_itinerario_filtri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/verde_chiarissimo"
+            android:gravity="center_horizontal"
+            android:text="@string/id_durata_itinerario_filtri"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/sliderRange_durata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/svArea_geografica" />
+
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/sliderRange_durata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:contentDescription="@string/slider_desc_durata"
+            android:stepSize="1"
+            android:theme="@style/MyMaterialTheme"
+            android:value="2"
+            android:valueFrom="0"
+            android:valueTo="13"
+            app:layout_constraintBottom_toTopOf="@+id/id_difficolta_itinerario_filtri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_durata_itinerario_filtri"
+            app:trackColorActive="@color/verde_scuro"
+            app:trackColorInactive="@color/verde_chiaro"
+            app:values="@array/initial_slider_values_durata" />
+
+        <TextView
+            android:id="@+id/id_difficolta_itinerario_filtri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:background="@color/verde_chiarissimo"
+            android:gravity="center_horizontal"
+            android:text="@string/tvDifficolta"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cbDiffFacile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sliderRange_durata" />
+
+        <CheckBox
+            android:id="@+id/cbDiffFacile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/cbDiffFacile"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/cbDiffIntermedio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_difficolta_itinerario_filtri"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbDiffIntermedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/cbDiffIntermedio"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/cbDiffDifficile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbDiffFacile"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbDiffDifficile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/cbDiffDifficile"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/cbDiffEstremo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbDiffIntermedio"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbDiffEstremo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/cbDiffEstremo"
+            android:textColor="@color/verde_scuro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/cbAccessibilitàDisabili_filtri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbDiffDifficile"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/cbAccessibilitàDisabili_filtri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/verde_chiarissimo"
+            android:gravity="center_horizontal"
+            android:text="@string/accessibilità_disabili_filtri"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnApplicaFiltri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbDiffEstremo"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnApplicaFiltri"
+            android:layout_width="150dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_rounded"
+            android:text="@string/btnApplicaFiltri"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCancellaFiltri"
+            app:layout_constraintTop_toBottomOf="@+id/cbAccessibilitàDisabili_filtri"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnCancellaFiltri"
+            android:layout_width="150dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_rounded"
+            android:text="@string/btnCancellaFiltri"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnApplicaFiltri"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbAccessibilitàDisabili_filtri"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.InserisciTracciatoActivity"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.NaTour.NoActionBar">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="130dp"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:layout_constraintVertical_bias="1.0"
+        mapbox:mapbox_cameraTargetLat="40.83892324381177"
+        mapbox:mapbox_cameraTargetLng="14.185021149735194"
+        mapbox:mapbox_cameraZoom="12"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_location_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/CercaLuogo"
+            mapbox:backgroundTint="@color/verde_scuro"
+            android:tint="@android:color/white"
+            mapbox:srcCompat="@android:drawable/ic_search_category_default"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ic_baseline_backspace_grey"
+            android:enabled="false"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Button
+        android:id="@+id/btnSalvaTracciato"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded_grey"
+        android:drawableEnd="@drawable/ic_baseline_save_alt_24"
+        android:enabled="false"
+        android:text="@string/btnSalvaTracciato"
+        android:textColor="@color/white"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnIniziaARegistrare"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/mapView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <Button
+        android:id="@+id/btnInserisciFileGPX"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded"
+        android:drawableEnd="@drawable/ic_baseline_upload_file_24"
+        android:text="@string/btnInserisciFileGPX"
+        android:textColor="@color/white"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/btnIniziaARegistrare"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnIniziaARegistrare"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded"
+        android:drawableStart="@drawable/ic_baseline_circle_24"
+        android:drawableEnd="@drawable/ic_baseline_location_on_24"
+        android:text="@string/btnIniziaARegistrare"
+        android:textColor="@color/white"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnInserisciFileGPX"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="1.0"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/btnSalvaTracciato"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

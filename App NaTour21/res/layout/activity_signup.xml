@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SignupActivity"
+    android:background="@drawable/for1"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.NaTour.NoActionBar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/Nome_Signup"
+            android:inputType="textPersonName"
+            android:textColor="@color/verde_chiarissimo"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etCognome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etCognome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/Cognome_Signup"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/verde_chiarissimo"
+            android:textColor="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etNickName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="@+id/etNome"
+            app:layout_constraintStart_toStartOf="@+id/etNome"
+            app:layout_constraintTop_toBottomOf="@+id/etNome" />
+
+        <EditText
+            android:id="@+id/etNickName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/NickName_Signup"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/verde_chiarissimo"
+            android:textColor="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etCognome"
+            app:layout_constraintTop_toBottomOf="@+id/etCognome" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:textColor="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/Email_Signup"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etNickName"
+            app:layout_constraintTop_toBottomOf="@+id/etNickName" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:textColor="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/Password_Signup"
+            android:inputType="textPassword"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etRepeatPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="@+id/etEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <EditText
+            android:id="@+id/etRepeatPass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:textColor="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/RepeatPassword_Signup"
+            android:inputType="textPassword"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/cbAgree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etPass"
+            app:layout_constraintTop_toBottomOf="@+id/etPass" />
+
+        <CheckBox
+            android:id="@+id/cbAgree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/verde_chiarissimo"
+            android:text="@string/AgreeTerms"
+            android:textColor="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etRepeatPass"
+            app:layout_constraintTop_toBottomOf="@+id/etRepeatPass"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/SignUp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbAgree" />
+
+
+        <FrameLayout
+            android:id="@+id/verification_fragment_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintBottom_toTopOf="@+id/etNome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

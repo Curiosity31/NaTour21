@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Elemento_inserisci_itinerario_in_compilation_id"
+    android:theme="@style/Theme.NaTour.NoActionBar"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/border"
+    android:layout_marginTop="13dp">
+
+    <TextView
+        android:id="@+id/id_nome_elemento_compilation"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/nome_elemento_inserisci_compilation"
+        android:textColor="@color/verde_scuro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mapViewElementoCompilation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbElementoCompilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dettagli_elemento_compilation"
+        app:layout_constraintEnd_toStartOf="@+id/id_nome_elemento_compilation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapViewElementoCompilation"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_nickname_utente_compilation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_nome_elemento_compilation"
+        app:mapbox_cameraTargetLat="40.83892324381177"
+        app:mapbox_cameraTargetLng="14.185021149735194"
+        app:mapbox_cameraZoom="13">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <TextView
+        android:id="@+id/id_nickname_utente_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/white"
+        android:paddingVertical="10dp"
+        android:text="@string/nickname_utente"
+        android:textColor="@color/verde_scuro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_baseline_profile_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapViewElementoCompilation" />
+
+    <Button
+        android:id="@+id/btn_dettagli_elemento_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:text="@string/btn_dettagli_elemento_compilation"
+        android:textAllCaps="false"
+        android:textColor="@color/verde_scuro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/id_nickname_utente_compilation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapViewElementoCompilation"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

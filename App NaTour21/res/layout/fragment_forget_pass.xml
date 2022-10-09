@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragment.ForgetPassFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_sigla"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="@string/Sigla_logo"
+            android:src="@drawable/logo_natour_sigla_2000ppi_big"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail_fragment_forget"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/etEmail_fragment_forget"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/etEmail_fragment_forget"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/verde_chiarissimo"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/btnRecuperaAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_sigla"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnRecuperaAccount"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/btn_Recupera_Pass"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/etNuova_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail_fragment_forget"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/etCodiceRecuperoPass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/etCode_rec_pass"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/verde_chiarissimo"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/btn_conferma_recupero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRip_nuova_pass"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/etNuova_pass"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/etRec_nuova_pass"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/verde_chiarissimo"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etRip_nuova_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRecuperaAccount"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/etRip_nuova_pass"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/verde_chiarissimo"
+            android:ems="10"
+            android:hint="@string/etRip_nuova_pass"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/verde_chiarissimo"
+            android:textColorHint="@color/verde_chiarissimo"
+            app:layout_constraintBottom_toTopOf="@+id/etCodiceRecuperoPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNuova_pass"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_conferma_recupero"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/btn_conferma_rec"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCodiceRecuperoPass"
+            app:layout_constraintVertical_bias="0.096"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activity.DettagliActivity"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.NaTour.NoActionBar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewDettagli"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="13dp"
+            android:contentDescription="@string/Logo"
+            android:src="@drawable/logo_natour_700ppi_small"
+            app:layout_constraintBottom_toTopOf="@+id/id_tv_nome_itinerario_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/id_tv_nome_itinerario_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/name_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_nome_itinerario_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDettagli" />
+
+        <TextView
+            android:id="@+id/id_nome_itinerario_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:text="@string/name_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_tv_tempo_totale_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_tv_nome_itinerario_dettagli" />
+
+        <TextView
+            android:id="@+id/id_tv_tempo_totale_dettagli"
+            style="@android:style/Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/tempo_totale_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_tempo_totale_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_nome_itinerario_dettagli"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/id_tempo_totale_dettagli"
+            style="@android:style/Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:text="@string/tempo_totale_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_tv_difficolta_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_tv_tempo_totale_dettagli" />
+
+        <TextView
+            android:id="@+id/id_tv_difficolta_dettagli"
+            style="@android:style/Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/difficoltà_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/id_difficolta_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_tempo_totale_dettagli"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/id_difficolta_dettagli"
+            style="@android:style/Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:text="@string/difficoltà_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_punto_di_inizio_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_tv_difficolta_dettagli" />
+
+        <TextView
+            android:id="@+id/tv_punto_di_inizio_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/punto_di_inizio_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/punto_di_inizio_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_difficolta_dettagli" />
+
+        <TextView
+            android:id="@+id/punto_di_inizio_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:text="@string/punto_di_inizio_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cbAccessibilitàDisabili"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_punto_di_inizio_dettagli" />
+
+        <CheckBox
+            android:id="@+id/cbAccessibilitàDisabili"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/accessibilità_disabili_Itinerario_dettagli"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescrizione_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/punto_di_inizio_dettagli" />
+
+        <TextView
+            android:id="@+id/tvDescrizione_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_chiarissimo"
+            android:text="@string/tvDescrizione_itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Descrizione_dettagli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbAccessibilitàDisabili" />
+
+        <TextView
+            android:id="@+id/Descrizione_dettagli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/white"
+            android:text="@string/tvDescrizione_itinerario"
+            android:textColor="@color/verde_scuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnModificaTempoTotale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescrizione_dettagli" />
+
+        <Button
+            android:id="@+id/btnModificaTempoTotale"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/btnModificaTempoTotale"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btnModificaDifficolta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Descrizione_dettagli" />
+
+        <Button
+            android:id="@+id/btnModificaDifficolta"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/verde_scuro"
+            android:text="@string/btnModificaDifficolta"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnModificaTempoTotale" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
